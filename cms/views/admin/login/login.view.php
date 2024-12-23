@@ -6,6 +6,7 @@
 
 
 <form action="index.php?<?= http_build_query(['route' => 'admin/login']) ?>" method="post">
+    <input type="hidden" name="_csrf" value="<?php echo e(csrf_token())?>">
     <label for="login-username">Username:</label>
     <input
             type="text"

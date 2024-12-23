@@ -21,6 +21,7 @@
                 <form style="display: inline"
                       method="post"
                       action="index.php?<?= http_build_query(['route' => 'admin/pages/delete']) ?>">
+                    <input type="hidden" name="_csrf" value="<?php echo e(csrf_token())?>">
                     <input type="hidden" name="id" value="<?= e($p->id) ?>">
                     <input type="submit" value="Delete" class="btn-link">
                 </form>

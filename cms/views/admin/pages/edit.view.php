@@ -21,6 +21,7 @@
     <label for="content">Content:</label>
     <textarea name="content"
               id="content"><?php if (isset($_POST['content'])) echo e($_POST['content']); else echo e($page->content) ?></textarea>
+    <input type="hidden" name="_csrf" value="<?php echo e(csrf_token()) ?>">
 
     <input type="submit" name="submit" value="submit !">
 </form>
